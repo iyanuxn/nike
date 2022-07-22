@@ -75,7 +75,7 @@ section {
 .header {
     overflow: hidden;
     height: 100vh;
-    background: linear-gradient(to bottom right, var(--light-green), var(--dark-green)), url(/assets/bg.png);
+    background: linear-gradient(to bottom right, var(--light-green), var(--dark-green)), url(assets/bg.png);
     -webkit-clip-path: polygon(0 0, 100% 0%, 100% 95%, 0 100%);
     clip-path: polygon(0 0, 100% 0%, 100% 95%, 0 100%);
 }
@@ -209,7 +209,7 @@ nav {
     background: black;
     padding: 5vw;
     background-size: cover;
-    background: url(/assets/banner.jpg);
+    background: url(assets/banner.jpg);
     color: #634139;
     background-repeat: no-repeat;
     background-size: 100vw;
@@ -233,7 +233,7 @@ nav {
 .cards {
     width: 84vw;
     display: inline-flex;
-    overflow-x: hidden;
+    overflow-x: scroll;
     justify-content: left;
     scrollbar-width: none;
     scroll-snap-type: x mandatory;
@@ -241,13 +241,8 @@ nav {
     scroll-behavior: smooth;
 }
 
-.cards:hover {
-    overflow-x: scroll;
-}
-
 .cards::-webkit-scrollbar {
-    height: 7px;
-    padding-top: 20vh;
+    display: none;
 }
 
 .card-container {
@@ -335,7 +330,7 @@ nav {
     margin-top: 10vw;
     padding: 10vw 8vw;
     background: black;
-    background-image: url(/assets/ad.png);
+    background-image: url(assets/ad.png);
     background-size: 70vw;
     background-position-x: 50vw;
     background-repeat: no-repeat;
@@ -536,11 +531,20 @@ nav {
         height: 25vw;
     }
 
+    .cards:hover {
+        overflow-x: scroll;
+    }
+
+    .cards::-webkit-scrollbar {
+        height: 7px;
+        padding-top: 20vh;
+    }
+
     .next {
         font-size: 1rem;
         padding: 3vw;
         width: 3vw;
-        height: 3vw;  
+        height: 3vw;
         border-radius: 1vw;
     }
 
@@ -548,7 +552,8 @@ nav {
         font-size: 1.5rem;
     }
 
-    .left, .right {
+    .left,
+    .right {
         width: 5vw;
         height: 5vw;
     }
