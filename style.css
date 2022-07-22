@@ -531,11 +531,16 @@ nav {
         height: 25vw;
     }
 
+    .cards {
+        overflow-x: hidden;
+    }
+
     .cards:hover {
         overflow-x: scroll;
     }
 
     .cards::-webkit-scrollbar {
+        display: contents;
         height: 7px;
         padding-top: 20vh;
     }
