@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Podium Sans";
-    src: url("/assets/Podium.otf");
+    src: url("assets/Podium.otf");
 }
 
 :root {
